@@ -459,6 +459,12 @@ ul#social li {
         background: url("../Images/twitter.png") no-repeat;
     }
 
+.codeBox {
+    font-family: Consolas, 'Lucida Console', 'Courier New', monospace;
+    width:  100%;
+    height:  400px;
+}
+
 
 /********************
 *   Mobile Styles   *
