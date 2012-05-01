@@ -4,7 +4,7 @@ $(document).ready () ->
 		textToChange = $.trim(@SourceText())
 		if textToChange == ""
 			return ""
-		lines = textToChange.match(/^.*([\n\r]+|$)/gm)
+		lines = textToChange.match(/^.*([\n\r]+|$)/gm) # I hate regex, and this is borred from a StackOverflow post.
 		text = ""
 		for line, i in lines
 			text = text + "\n\'#{$.trim(line)}\'"
