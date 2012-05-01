@@ -10,7 +10,6 @@ $(document).ready () ->
 			text = text + "\n\'#{$.trim(line)}\'"
 			if i+1 != lines.length
 				text = text + ","
-
 		return $.trim(text)
 	,viewModel
 
