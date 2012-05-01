@@ -1,0 +1,28 @@
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@section featured {
+<section class="featured">
+    <div class="content-wrapper">
+        <hgroup class="title">
+            <h1>List to In Query</h1>
+        </hgroup>
+        <p>
+            This tool converts a list of text (one item per line) to a string perfect for doing IN queries with.
+        </p>
+    </div>
+</section>
+}
+
+<section class="features">
+    <section class="feature">
+        <h3>Original list:</h3>
+        <textarea style="width:  100%; height:  400px;" data-bind="value: SourceText, valueUpdate: 'afterkeydown'"></textarea>
+    </section>
+    <section class="feature">
+        
+        <h3>Result:</h3>
+        <textarea style="width:  100%; height:  400px;" data-bind="value: ProcessedText"></textarea>
+    </section>
+</section>
