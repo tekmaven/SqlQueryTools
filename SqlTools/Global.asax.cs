@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -26,12 +24,6 @@ namespace SqlTools
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
-
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
@@ -43,18 +35,21 @@ namespace SqlTools
         {
             AreaRegistration.RegisterAllAreas();
 
-            // Use LocalDB for Entity Framework by default
-            Database.DefaultConnectionFactory = new SqlConnectionFactory("Data Source=(localdb)\v11.0; Integrated Security=True; MultipleActiveResultSets=True");
-
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
 
-            BundleTable.Bundles.RegisterTemplateBundles();
 
-            Bundle b = new Bundle("~/kojs", new JsMinify());
-            b.AddFile("~/Scripts/knockout.js");
-            b.AddFile("~/scripts/ListTool.js");
-            BundleTable.Bundles.Add(b);
+            var jsBundle = new Bundle("~/Scripts/js", new JsMinify());
+            jsBundle.AddFile("~/Scripts/jquery-1.7.2.js");
+            jsBundle.AddFile("~/Scripts/modernizr-2.5.3.js");
+            jsBundle.AddFile("~/Scripts/knockout.js");
+            jsBundle.AddFile("~/Scripts/jquery.clippy.min.js");
+            jsBundle.AddFile("~/scripts/ListTool.js");
+            BundleTable.Bundles.Add(jsBundle);
+
+            var cssBundle = new Bundle("~/Content/css", new CssMinify());
+            cssBundle.AddDirectory("~/Content/", "*.css", true);
+            BundleTable.Bundles.Add(cssBundle);
         }
     }
 }
