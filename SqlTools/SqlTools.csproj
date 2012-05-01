@@ -114,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\clippy.swf" />
+    <Content Include="Content\tipsy.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.7.2.intellisense.js" />
@@ -121,6 +122,7 @@
     <Content Include="Scripts\jquery-1.7.2.min.js" />
     <Content Include="Scripts\jquery.clippy.js" />
     <Content Include="Scripts\jquery.clippy.min.js" />
+    <Content Include="Scripts\jquery.tipsy.js" />
     <Content Include="Scripts\knockout.debug.js" />
     <Content Include="Scripts\knockout.js" />
     <Content Include="Scripts\ListTool.js">

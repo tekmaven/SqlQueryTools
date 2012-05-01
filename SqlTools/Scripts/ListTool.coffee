@@ -24,3 +24,9 @@ $(document).ready () ->
 
 
 	ko.applyBindings viewModel	
+
+	$('.tooltip').tipsy {
+		gravity: 'e'
+		title: 'data-tooltip'
+		fade: true
+	}

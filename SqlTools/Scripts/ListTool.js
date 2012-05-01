@@ -34,7 +34,12 @@
         clippy_path: '/Content/clippy.swf'
       });
     }, viewModel);
-    return ko.applyBindings(viewModel);
+    ko.applyBindings(viewModel);
+    return $('.tooltip').tipsy({
+      gravity: 'e',
+      title: 'data-tooltip',
+      fade: true
+    });
   });
 
 }).call(this);

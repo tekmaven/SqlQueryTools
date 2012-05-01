@@ -42,6 +42,7 @@ namespace SqlTools
             var jsBundle = new Bundle("~/Scripts/js", new JsMinify());
             jsBundle.AddFile("~/Scripts/jquery-1.7.2.js");
             jsBundle.AddFile("~/Scripts/modernizr-2.5.3.js");
+            jsBundle.AddFile("~/Scripts/jquery.tipsy.js");
             jsBundle.AddFile("~/Scripts/knockout.js");
             jsBundle.AddFile("~/Scripts/jquery.clippy.min.js");
             jsBundle.AddFile("~/scripts/ListTool.js");
