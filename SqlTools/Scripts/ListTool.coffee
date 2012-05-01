@@ -10,7 +10,17 @@ $(document).ready () ->
 			text = text + "\n\'#{$.trim(line)}\'"
 			if i+1 != lines.length
 				text = text + ","
-		return $.trim(text)
-	,viewModel
+		text = $.trim(text)
+		return text
+	, viewModel
 
-	ko.applyBindings viewModel
+	viewModel.ProcessedTextThrottled = ko.computed(() ->
+		return @ProcessedText()
+	, viewModel).extend({ throttle: 500 });
+
+	ko.computed () ->
+		$('.clippy').clippy {text: @ProcessedTextThrottled(), clippy_path: '/Content/clippy.swf'}
+	, viewModel
+
+
+	ko.applyBindings viewModel	

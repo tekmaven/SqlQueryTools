@@ -20,7 +20,19 @@
           text = text + ",";
         }
       }
-      return $.trim(text);
+      text = $.trim(text);
+      return text;
+    }, viewModel);
+    viewModel.ProcessedTextThrottled = ko.computed(function() {
+      return this.ProcessedText();
+    }, viewModel).extend({
+      throttle: 500
+    });
+    ko.computed(function() {
+      return $('.clippy').clippy({
+        text: this.ProcessedTextThrottled(),
+        clippy_path: '/Content/clippy.swf'
+      });
     }, viewModel);
     return ko.applyBindings(viewModel);
   });
