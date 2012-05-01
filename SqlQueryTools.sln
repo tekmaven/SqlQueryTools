@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 11
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlTools", "SqlTools\SqlTools.csproj", "{BB715B83-3EC0-45E4-8265-14AC8768F9A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlQueryTools", "SqlQueryTools\SqlQueryTools.csproj", "{BB715B83-3EC0-45E4-8265-14AC8768F9A3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1F2D3C88-19C7-449D-A1BD-6DD50A7DC46D}"
 	ProjectSection(SolutionItems) = preProject
