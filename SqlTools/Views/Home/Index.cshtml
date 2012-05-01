@@ -1,5 +1,5 @@
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "SQL Query Tools | ";
 }
 
 @section featured {
@@ -9,7 +9,7 @@
             <h1>List to IN Query</h1>
         </hgroup>
         <p>
-            This tool converts a list of text (one item per line) to a string perfect for doing IN queries with.  It trims all whitespace, and does not include blank lines.
+            This handy tool trims and surrounds each line of input with single quotes and places a comma between each line.  This is perfect for converting a list of guids, ids, or strings into the contents of an IN query.
         </p>
     </div>
 </section>
@@ -17,7 +17,7 @@
 
 <section class="features">
     <section class="feature">
-        <h3>Original list:</h3>
+        <h3>Source:</h3>
         <textarea class="codeBox" data-bind="value: SourceText, valueUpdate: 'afterkeydown'"></textarea>
     </section>
     <section class="feature">
